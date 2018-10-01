@@ -8,9 +8,9 @@ class CheckBox extends React.Component {
                 <div>
                     {/* <CustomInput type="radio" id="card" name="paymentRadio" label="Card"/> */}
                     {/* <CustomInput type="radio" id={this.props.option1} name={this.props.name} label={this.props.option1} /> */}
-                    <CustomInput type="checkbox" id={this.props.option1} name={this.props.name} label={this.props.option1} />
-                    <CustomInput type="checkbox" id={this.props.option2} name={this.props.name} label={this.props.option2} />
-                    <CustomInput type="checkbox" id={this.props.option3} name={this.props.name} label={this.props.option3} />
+                    <CustomInput type="checkbox" id={this.props.option1} name={this.props.name} label={this.props.option1} onChange={this.props.changed}/>
+                    <CustomInput type="checkbox" id={this.props.option2} name={this.props.name} label={this.props.option2} onChange={this.props.changed}/>
+                    <CustomInput type="checkbox" id={this.props.option3} name={this.props.name} label={this.props.option3} onChange={this.props.changed}/>
                 </div>
             </FormGroup>
         )

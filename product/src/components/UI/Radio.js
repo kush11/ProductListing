@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup,CustomInput, Label } from 'reactstrap';
+import { FormGroup, Label } from 'reactstrap';
 class Radio extends React.Component {
     render() {
         return (

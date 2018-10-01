@@ -1,6 +1,7 @@
 .App {
   text-align: left;
   overflow-x: hidden;
+  
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -33,7 +34,7 @@
   margin-left: 100px;
 }
 .btn{
-  margin-left: 150px;
+  margin-left: 70px;
 }
 .nav{
   background-color: cadetblue;
@@ -47,3 +48,63 @@
   border: 5px;
 }
 .div-2{width: 1000px; height: 590px; overflow-y: scroll}
+
+.spinner{
+  width: 80px;
+  height: 80px;
+  
+  border: 2px solid #f3f3f3;
+  border-top:3px solid #f25a41;
+  border-radius: 100%;
+  
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+  
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from{
+      transform: rotate(0deg);
+  }to{
+      transform: rotate(360deg);
+  }
+}
+
+#overlay{
+height:100%;
+width:100%;
+background:rgba(0, 0, 0, 1);
+position:fixed;
+left:0;
+top:0;
+}
+.close{
+  border: solid;
+  margin-right:5px;  
+    padding: 5px;
+    float: right;
+    color: red;
+}
+
+.addProductForm{
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 5px #CCC;
+  padding: 10px;
+}
+label{
+  margin-top: 10px;
+}
+.center1{
+  text-align: center;
+}
+
+.center2{
+  text-align: center;
+}
