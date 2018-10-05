@@ -9,33 +9,36 @@ import SortCombo from './components/UI/ComboboxSort'
 import FilterCombo from './components/UI/ComboboxFilter'
 import FilterPayment from './components/UI/FilterPayment'
 import FilterByCity from './components/UI/FilterByCity'
+import Footer from './components/UI/Footer'
+import Model from './components/Model/Modal'
+import Layout from './components/UI/Layout/Layout'
 
 class App extends Component {
-  state = {
-    data: []
-  }
-  componentDidMount() {
-    Axios.get('./productList.json')
-      .then(res => {
-        let responseData = [];
-        for (let prop in res.data) {
-          responseData.push({
-            id: prop,
-            name: res.data[prop].name,
-            type: res.data[prop].type,
-            imageUrl: res.data[prop].imageUrl,
-            price: res.data[prop].price,
-            quantity: res.data[prop].quantity,
-            payment: res.data[prop].payment,
-            city: res.data[prop].city
-          });
-        }
-        this.setState({ data: responseData });
-      })
-      .catch(error => {
-        console.log("error from component did mount" + error);
-      });
-  }
+  // state = {
+  //   data: []
+  // }
+  // componentDidMount() {
+  //   Axios.get('./productList.json')
+  //     .then(res => {
+  //       let responseData = [];
+  //       for (let prop in res.data) {
+  //         responseData.push({
+  //           id: prop,
+  //           name: res.data[prop].name,
+  //           type: res.data[prop].type,
+  //           imageUrl: res.data[prop].imageUrl,
+  //           price: res.data[prop].price,
+  //           quantity: res.data[prop].quantity,
+  //           payment: res.data[prop].payment,
+  //           city: res.data[prop].city
+  //         });
+  //       }
+  //       this.setState({ data: responseData });
+  //     })
+  //     .catch(error => {
+  //       console.log("error from component did mount" + error);
+  //     });
+  // }
 
   handleDelete = (e) => {
     const id = e.target.id;
@@ -149,12 +152,14 @@ class App extends Component {
   render() {
     return (
 
-      <div className="App " >
-        <Nav />
-        <div className="row div-1 " >
+      <div className="App " >       
+        {/* <ProductList dataList={this.state.data} change={this.handleDelete} />  
+        <Form />   */}
+        <Layout/>
+        {/* <div className="row div-1 " >
           <div className="col-4 ProductList" >
             <h3 className="center2">Form Content</h3>
-            <Form />
+            <Form />           
           </div>
 
           <div className="col-8 ml-8 div-2">
@@ -164,10 +169,12 @@ class App extends Component {
               <span className="ml-2 "><FilterCombo onchange={this.filterBy} /></span>
               <span className="ml-2 "><FilterPayment onchange={this.filterPaymentMode} /></span>
               <span className="ml-2 "><FilterByCity onchange={this.filterCityMode} /></span>
+            
             </div>
-            <ProductList dataList={this.state.data} change={this.handleDelete} />
+            <ProductList dataList={this.state.data} change={this.handleDelete} />            
           </div>
-        </div>
+        </div> */}       
+        <Footer/>
       </div>
 
     );

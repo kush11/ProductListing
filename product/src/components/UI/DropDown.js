@@ -6,7 +6,7 @@ class DropDown extends Component {
             <select class="form-control" onChange={this.props.onchange} >
                 <option value="selected" selected>---Select---</option>
                 <option value="Fruits">Fruits</option>
-                <option value="Vegitable">Vegitable</option>
+                <option value="Vegetable">Vegetable</option>
                 <option value="Electronics">Electronics</option>
             </select>
         )

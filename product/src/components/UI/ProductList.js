@@ -3,7 +3,7 @@ import React from 'react';
 const ProductList = (props) => {
     const listOfProducts = props.dataList.map(appn => {
         return (
-            <div className="card mb-1 mr-2">
+            <div className="col-md-5 float-left card mb-1 mr-2" key={appn.id}>
                 <div className="figure">
                     <div className="row">
                         <div className="col-4">

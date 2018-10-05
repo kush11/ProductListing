@@ -8,6 +8,4 @@ class InputType extends Component {
         )
     }
 }
-
 export default InputType;
-
